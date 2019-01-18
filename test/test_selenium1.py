@@ -1,4 +1,5 @@
 import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
@@ -8,7 +9,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 class TestSelenium1():
 
     def test_google1(self):
-        driver = webdriver.Firefox();
+        driver = webdriver.Firefox()
         wait = WebDriverWait(driver, 10, 0.1)
         driver.get("http://google.com")
         wait.until(expected_conditions.visibility_of_element_located((By.NAME, "q")))
@@ -21,7 +22,7 @@ class TestSelenium1():
         print("class 1 test 1 - SUCCESS!\n")
 
     def test_google2(self):
-        driver = webdriver.Firefox();
+        driver = webdriver.Firefox()
         wait = WebDriverWait(driver, 10, 0.1)
         driver.get("http://google.com")
         wait.until(expected_conditions.visibility_of_element_located((By.NAME, "q")))
